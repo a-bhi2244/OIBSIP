@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="A modern temperature converter for Celsius, Fahrenheit and Kelvin.">
+  <title>Thermo — Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Thermo home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>thermo<span class="brand-dot">.</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="topbar-label"><span class="status-dot"></span> Live conversion</span>
+        <button type="button" id="themeBtn" class="icon-btn" aria-label="Switch to light theme" title="Switch theme">☀</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="intro">
+        <div class="eyebrow"><span class="eyebrow-line"></span> Simple. Precise. Instant.</div>
+        <h1>Temperature,<br><span>made simple.</span></h1>
+        <p class="intro-copy">Convert between Celsius, Fahrenheit and Kelvin with a clean, intuitive tool designed for everyday use.</p>
+        <div class="feature-list">
+          <div class="feature"><span class="feature-icon" aria-hidden="true">↗</span><div><strong>Instant results</strong><small>All three scales update as you type</small></div></div>
+          <div class="feature"><span class="feature-icon" aria-hidden="true">◎</span><div><strong>Accurate by design</strong><small>Validated values, with the formula shown</small></div></div>
+          <div class="feature"><span class="feature-icon" aria-hidden="true">⌘</span><div><strong>Ready anywhere</strong><small>Responsive, keyboard friendly, light and dark</small></div></div>
+        </div>
+        <div class="intro-footer">A little tool for a world of temperatures.</div>
+      </section>
+
+      <section class="converter-card" aria-labelledby="converterTitle">
+        <div class="card-heading">
+          <div>
+            <div class="card-kicker">Conversion tool</div>
+            <h2 id="converterTitle">Temperature converter</h2>
+          </div>
+          <div class="thermometer" aria-hidden="true">🌡️</div>
+        </div>
+        <p class="card-description">Enter a value, pick its scale, and the rest is done for you.</p>
+
+        <form id="converterForm" novalidate>
+          <label for="tempInput" class="field-label">Temperature value</label>
+          <div class="input-wrap" id="inputWrap">
+            <input type="text" id="tempInput" inputmode="decimal" placeholder="e.g. 25 or -40.5" autocomplete="off" aria-describedby="inputHint error">
+            <span class="input-unit" id="inputUnit">°C</span>
+          </div>
+          <small id="inputHint" class="field-hint">Negative values and decimals are supported. Press Esc to clear.</small>
+          <p id="error" class="error" role="alert"></p>
+
+          <div class="label-row"><span class="field-label" id="unitLabel">Convert from</span></div>
+          <div class="segmented" role="radiogroup" aria-labelledby="unitLabel">
+            <input type="radio" name="unit" id="unitC" value="C" checked><label for="unitC">Celsius</label>
+            <input type="radio" name="unit" id="unitF" value="F"><label for="unitF">Fahrenheit</label>
+            <input type="radio" name="unit" id="unitK" value="K"><label for="unitK">Kelvin</label>
+          </div>
+
+          <div class="presets" aria-label="Quick examples">
+            <span class="presets-title">Try</span>
+            <button type="button" class="chip" data-value="0" data-unit="C">Water freezes</button>
+            <button type="button" class="chip" data-value="37" data-unit="C">Body temp</button>
+            <button type="button" class="chip" data-value="100" data-unit="C">Water boils</button>
+            <button type="button" class="chip" data-value="-40" data-unit="F">−40 °F</button>
+            <button type="button" class="chip" data-value="0" data-unit="K">Absolute zero</button>
+          </div>
+
+          <button id="convertBtn" type="submit"><span>Convert temperature</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+        </form>
+
+        <section id="results" class="results" aria-live="polite" aria-atomic="true">
+          <div class="results-header">
+            <div><div class="card-kicker">Your results</div><h3>Converted values</h3></div>
+            <button type="button" id="copyBtn" class="copy-btn" aria-label="Copy all results">▣ <span>Copy</span></button>
+          </div>
+          <div class="result-grid">
+            <article class="result-tile result-c"><span class="result-symbol">°</span><div><span class="result-label">Celsius</span><strong id="outC">—</strong></div><span class="result-unit">°C</span></article>
+            <article class="result-tile result-f"><span class="result-symbol">℉</span><div><span class="result-label">Fahrenheit</span><strong id="outF">—</strong></div><span class="result-unit">°F</span></article>
+            <article class="result-tile result-k"><span class="result-symbol">K</span><div><span class="result-label">Kelvin</span><strong id="outK">—</strong></div><span class="result-unit">K</span></article>
+          </div>
+          <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+
+          <div class="gauge" aria-hidden="true">
+            <div class="gauge-head"><span>How it feels</span><strong id="feelLabel">—</strong></div>
+            <div class="gauge-track"><span class="gauge-marker" id="gaugeMarker"></span></div>
+            <div class="gauge-scale"><span>−50 °C</span><span>0</span><span>60 °C</span></div>
+          </div>
+
+          <details class="formula">
+            <summary>Show the calculation</summary>
+            <ul id="formulaList"></ul>
+          </details>
+        </section>
+
+        <section id="historyBox" class="history" hidden>
+          <div class="history-head">
+            <span class="card-kicker">Recent</span>
+            <button type="button" id="clearHistory" class="link-btn">Clear</button>
+          </div>
+          <ul id="historyList" class="history-list"></ul>
+        </section>
+
+        <div class="card-bottom"><span aria-hidden="true">✦</span> Built for clarity, wherever you are.</div>
+      </section>
+    </main>
+    <footer class="footer"><span>Thermo <span class="footer-separator">/</span> Temperature converter</span><span>Designed with care <span class="footer-heart" aria-hidden="true">♥</span></span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

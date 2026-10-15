@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal portfolio of Abhishek Patel, AI Engineer."
+    />
+    <title>Abhishek Patel | AI Engineer</title>
+
+    <!-- Favicon (use your logo) -->
+    <link rel="icon" href="logo.png" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="top">
+    <!-- ============ NAVIGATION ============ -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="logo" aria-label="Abhishek Patel, home">
+          <img src="logo.png" alt="AP logo" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#research">Research</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="eyebrow">Hello, I'm</p>
+            <h1>Abhishek Patel</h1>
+            <h2 class="role">Aspiring AI Engineer</h2>
+            <p class="hero-sub">
+              I build intelligent, data-driven applications using Python,
+              Machine Learning, and AI technologies to solve real-world problems
+              and create innovative solutions.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+          </div>
+
+          <!-- Photo lagani ho to neeche wali div hata kar ye use karo:
+               <img src="photo.jpg" alt="Abhishek Patel" class="avatar avatar-photo" /> -->
+          <img
+            src="photo.png"
+            alt="Abhishek Patel"
+            class="avatar avatar-photo"
+          />
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section">
+        <div class="container narrow">
+          <h2 class="section-title">About Me</h2>
+          <p class="about-text">
+            I'm a Computer Science student aspiring to become an AI Engineer,
+            with a focused interest in Machine Learning, Deep Learning, and
+            Generative AI. My goal is to design, develop, and deploy intelligent
+            applications that solve real-world problems through data-driven
+            insights and automation. I'm actively strengthening my Python, data
+            analysis, and model-building skills while working on practical AI
+            projects. I aim to bridge the gap between emerging AI research and
+            real-world applications by building solutions that are useful,
+            scalable, and impactful. Beyond technology, I enjoy exploring
+            open-source projects, photography, and contributing to the AI
+            community through blogs and tutorials.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="section section-alt">
+        <div class="container narrow">
+          <h2 class="section-title">Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">2024 - 2028</span>
+              <h3>B.Tech in Computer Science</h3>
+              <p class="timeline-place">Quantum University, Roorkee</p>
+              <p>CGPA: 7 | Focus: AI, Machine Learning</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2021 - 2023</span>
+              <h3>Class XII (Science)</h3>
+              <p class="timeline-place">Om National Academy, Birgunj, Nepal</p>
+              <p>Percentage: 68%</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2019 - 2021</span>
+              <h3>Class X</h3>
+              <p class="timeline-place">
+                Mount Hermon Secondary School, Birgunj, Nepal
+              </p>
+              <p>CGPA: 2.65</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <span class="skill-icon">Py</span>
+              <h3>Python</h3>
+              <p>Scripting and automation</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">ML</span>
+              <h3>Machine Learning</h3>
+              <p>Scikit-learn, model building</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">DL</span>
+              <h3>Deep Learning</h3>
+              <p>Neural networks, CNNs</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">&#9783;</span>
+              <h3>Data Analysis</h3>
+              <p>Pandas, NumPy, Matplotlib</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">CV</span>
+              <h3>Computer Vision</h3>
+              <p>OpenCV, image processing</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">Git</span>
+              <h3>Git &amp; GitHub</h3>
+              <p>Version control</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">&lt;/&gt;</span>
+              <h3>HTML &amp; CSS</h3>
+              <p>Responsive web pages</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">JS</span>
+              <h3>JavaScript</h3>
+              <p>Basics and DOM</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">SQL</span>
+              <h3>SQL</h3>
+              <p>Queries, joins, aggregation</p>
+            </div>
+
+            <div class="skill-card">
+              <span class="skill-icon">DB</span>
+              <h3>DBMS</h3>
+              <p>Normalization, ER models</p>
+            </div>
+
+            <div class="skill-card">
+              <span class="skill-icon">Jv</span>
+              <h3>Java</h3>
+              <p>OOP and core concepts</p>
+            </div>
+
+            <div class="skill-card">
+              <span class="skill-icon">C</span>
+              <h3>C</h3>
+              <p>Programming fundamentals</p>
+            </div>
+
+            <div class="skill-card">
+              <span class="skill-icon">C++</span>
+              <h3>C++</h3>
+              <p>OOP and data structures</p>
+            </div>
+
+            <div class="skill-card">
+              <span class="skill-icon">DA</span>
+              <h3>Data Analysis</h3>
+              <p>Pandas, NumPy, Matplotlib</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">PHP</span>
+              <h3>PHP</h3>
+              <p>Server-side web development</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <img
+                src="images/sugarcane.png"
+                alt="Sugarcane Leaf Disease Detection screenshot"
+                class="project-thumb"
+              />
+              <div class="project-body">
+                <h3>Sugarcane Leaf Disease Detection</h3>
+                <p>
+                  A machine learning model for detecting diseases in sugarcane
+                  leaves.
+                </p>
+                <div class="tags">
+                  <span>Python</span><span>Machine Learning</span
+                  ><span>OpenCV</span>
+                </div>
+                <a
+                  href="https://github.com/a-bhi2244/Sugarcane_Leaf_Disease_Detection"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  >View on GitHub &rarr;</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="images/electricity.png"
+                alt="Electricity Demand Forecasting screenshot"
+                class="project-thumb"
+              />
+              <div class="project-body">
+                <h3>Electricity Demand Forecasting</h3>
+                <p>
+                  A machine learning model for forecasting electricity demand
+                  based on historical data and weather patterns.
+                </p>
+                <div class="tags">
+                  <span>Python</span><span>Machine Learning</span
+                  ><span>Pandas</span>
+                </div>
+                <a
+                  href="https://github.com/a-bhi2244/electricity-demand-forecasting"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  >View on GitHub &rarr;</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="images/landing.png"
+                alt="Landing page screenshot"
+                class="project-thumb"
+              />
+              <div class="project-body">
+                <h3>Landing Page</h3>
+                <p>
+                  A modern, mobile-first landing page for a fictional product,
+                  built from scratch.
+                </p>
+                <div class="tags"><span>HTML</span><span>CSS</span></div>
+                <a
+                  href="https://github.com/a-bhi2244/modern-landing-page"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  >View on GitHub &rarr;</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RESEARCH ============ -->
+      <section id="research" class="section">
+        <div class="container narrow">
+          <h2 class="section-title">Research Publication</h2>
+          <article class="paper-card">
+            <h3>AI-Based Marketplace Price Matching for Produce</h3>
+            <p class="paper-meta">
+              Abhishek Patel, Sagar Chaudhary, Aditya Raj<br />
+              Published in
+              <strong
+                >International Journal of Research Publication and Reviews
+                (IJRPR)</strong
+              >, Vol 7, Issue 5, May 2026, pp. 10078-10086 | ISSN 2582-7421
+            </p>
+            <p>
+              Produce Match is an end-to-end AI system for real-time produce
+              price matching. It combines LightGBM, LSTM and Transformer models
+              with a multi-agent reinforcement learning engine, IoT freshness
+              sensing and a blockchain audit layer. It achieved MAPE of 3.7%,
+              4.1% and 5.2% on three real-world datasets, with inference under
+              100 ms on edge hardware.
+            </p>
+            <div class="tags">
+              <span>Machine Learning</span><span>LSTM</span>
+              <span>Reinforcement Learning</span><span>IoT</span>
+              <span>Blockchain</span>
+            </div>
+            <a
+              href="papers/IJRPR65642.pdf"
+              class="project-link"
+              target="_blank"
+              rel="noopener"
+            >
+              Read Paper (PDF) &rarr;
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="section section-alt">
+        <div class="container narrow center">
+          <h2 class="section-title">Contact</h2>
+          <p class="contact-intro">
+            Have a project in mind or just want to say hi? My inbox is open.
+          </p>
+          <p class="contact-name">Abhishek Patel</p>
+          <a href="mailto:patelab22444@gmail.com" class="contact-email"
+            >patelab22444@gmail.com</a
+          >
+          <br />
+          <a href="tel:+918603848046" class="contact-phone">+91 8603848046</a>
+          <br />
+          <a
+            href="https://www.google.com/maps/place/Quantum+University/@30.0083889,77.7635911,17z/data=!3m1!4b1!4m6!3m5!1s0x390ec88c479bdbdb:0x30485550e6060b54!8m2!3d30.0083889!4d77.7635911!16s%2Fg%2F11dxm8pp7s?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D"
+            class="contact-address"
+            target="_blank"
+            rel="noopener"
+            >Roorkee, Uttarakhand, India</a
+          >
+
+          <div class="socials">
+            <a
+              href="https://github.com/a-bhi2244"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abhishek-patel-23b804321"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        &copy; <span id="year">Copyright 2026</span> All rights reserved |
+        Designed &amp; Developed by Abhishek Patel
+      </p>
+      <a href="#top" class="to-top">Back to top &uarr;</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
